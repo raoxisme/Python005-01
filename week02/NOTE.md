@@ -12,3 +12,5 @@
 ## 学习笔记
 Ctrl + Enter：执行选择的代码片段
 
+python黑魔法---上下文管理器（contextor）
+https://www.jianshu.com/p/d53449f9e7e0
