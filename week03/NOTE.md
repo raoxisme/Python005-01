@@ -89,3 +89,6 @@ RIGHT JOIN 查询结果：
 
 - 请合理设计三张表的字段类型和表结构
 - 请实现转账 100 极客币的 SQL(可以使用 pymysql 或 sqlalchemy-orm 实现)，张三余额不足，转账过程中数据库 crash 等情况需保证数据一致性。
+
+> 回答
+Q6_transfer.py
