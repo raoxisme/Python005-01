@@ -53,26 +53,42 @@ SessionClass = sessionmaker(bind=engine)
 session = SessionClass()
 
 # 增加User数据
-user_demo = User_table(user_name=u'shark' )
-user_demo2 = User_table(user_name=u'zhang san' )
-user_demo3 = User_table(user_name=u'wang wu' )
+# user_demo = User_table(user_name=u'shark' )
+# user_demo2 = User_table(user_name=u'zhang san' )
+# user_demo3 = User_table(user_name=u'wang wu' )
 
-session.add(user_demo)
-session.add(user_demo2)
-session.add(user_demo3)
-session.flush()
+# session.add(user_demo)
+# session.add(user_demo2)
+# session.add(user_demo3)
+# session.flush()
 
-session.commit()
+# session.commit()
 
 # 增加资产数据
-asset_demo = Asset_table(user_id=1, asset=10000.50 )
-asset_demo2 = Asset_table(user_id=2, asset=450.50 )
-asset_demo3 = Asset_table(user_id=3, asset=50.00 ) #余额小于转账金额100
+# asset_demo = Asset_table(user_id=1, asset=10000.50 )
+# asset_demo2 = Asset_table(user_id=2, asset=450.50 )
+# asset_demo3 = Asset_table(user_id=3, asset=50.00 ) #余额小于转账金额100
 
-session.add(asset_demo)
-session.add(asset_demo2)
-session.add(asset_demo3)
-session.flush()
+# session.add(asset_demo)
+# session.add(asset_demo2)
+# session.add(asset_demo3)
+# session.flush()
 
-session.commit()
+from_user = session.query(Asset_table).filter(Asset_table.user_id == 3).one() 
+
+to_user = session.query(Asset_table).filter(Asset_table.user_id == 1).one() 
+
+transfer_value = 100
+
+if (from_user.asset >= transfer_value ):
+    transaction_demo = Transaction_table(user_id_from=3, user_id_to=1, amount=transfer_value )
+    asset_demo = Asset_table(user_id=from_user, asset= from_user.asset - transfer_value )
+    asset_demo3 = Asset_table(user_id=to_user, asset= to_user.asset +  transfer_value)
+
+    session.commit()
+    print('交易成功')
+else:
+    print('余额不足')
+    session.rollback()
+
 
