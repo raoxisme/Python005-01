@@ -81,7 +81,7 @@ DATABASES = {
     # }
     'default': {
         'ENGINE': 'django.db.backends.mysql', #remoteUser:testabcd@192.168.3.83:3306/db1
-        'NAME': 'db1',
+        'NAME': 'testdb',
         'USER': 'remoteUser',
         'PASSWORD': 'testabcd',
         'HOST': '192.168.3.83',
