@@ -101,11 +101,11 @@ WSGI_APPLICATION = 'MyDjango.wsgi.application'
 # pip install pymysql
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'db2',
-        'USER': 'root',
-        'PASSWORD': 'rootroot',
-        'HOST': '127.0.0.1',
+        'ENGINE': 'django.db.backends.mysql', #remoteUser:testabcd@192.168.3.83:3306/testdb?charset=utf8mb4
+        'NAME': 'testdb',
+        'USER': 'remoteUser',
+        'PASSWORD': 'testabcd',
+        'HOST': '192.168.3.83',
         'PORT': '3306',
     }
     # 生产环境有可能连接第二个数据库
