@@ -1,12 +1,17 @@
 学习笔记
+
+## 作业：
+step1: 导入数据表dump文件.表结构：movie_title | short_evaluate | star  
+mysql>> source t2.sql
+
+step2: python3 ./douban/manage.py runserver
+
+## 笔记
 Django开发
 
 安装
 pip install --upgrade django==2.2.17 -i https://pypi.douban.com/simple
 pip install --upgrade pymysql -i https://pypi.douban.com/simple
-
-导入数据表dump文件.表结构：movie_title | short_evaluate | star
-source t2.sql
 
 $ python3 manage.py help --- 查看该工具的具体功能
 $ python3 manage.py startapp index
@@ -23,4 +28,6 @@ DATABASE caitu99 CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 更改表编码：
 ALTER TABLE TABLE_NAME CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 
-python3 manage.py runserver
+#学号:G20200389060044
+#姓名:raox
+#作业&总结链接:https://github.com/raoxisme/Python005-01/tree/main/week04
