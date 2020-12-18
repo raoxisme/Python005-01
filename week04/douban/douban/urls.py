@@ -21,4 +21,4 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', include('index.urls')),
     path('search', include('index.urls')),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(settings.STATIC_URL, include('index.urls'))
