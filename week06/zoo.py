@@ -28,8 +28,8 @@ class Animal(object):
         self._shape = shape_int
         self._nature = nature_int
 
-        if self._shape >= SHAPE_MEDIUM and self._spec == SPEC_MEAT and self._nature == NATURE_FEROCIOUS:
-            self.is_ferocious_animal = True
+        # if self._shape >= SHAPE_MEDIUM and self._spec == SPEC_MEAT and self._nature == NATURE_FEROCIOUS:
+        #     self.is_ferocious_animal = True
 
     def __str__(self):
         """__str__"""
