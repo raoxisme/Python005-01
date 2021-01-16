@@ -22,7 +22,7 @@ router.register(r'orders', views.OrderAPIViewSet, 'orders_list')
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('api-auth/', include('rest_framework.urls',
-                               namespace='rest_framework')),
+    path('api-auth/', include('rest_framework.urls',  namespace='rest_framework')),
     path('docs',include_docs_urls(title='BBS')),
+    # path(r'^delete_order/(?P<pk>\d+)/$', delete_order, name="delete_order")
 ]
