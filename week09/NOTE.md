@@ -34,7 +34,7 @@ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple  coreapi pyyaml
 DATABASES = {   
     'default': {   
         'ENGINE': 'django.db.backends.mysql',   
-        'NAME': 'microblog_dbv5',   
+        'NAME': 'microcrm_dbv1',   
         'USER': 'remoteUser',   
         'PASSWORD': 'testestabcdtpass',   
         'HOST': '192.168.3.83',    
